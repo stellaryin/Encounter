@@ -13,6 +13,7 @@ import java.util.List;
 
 import encounter.wilson.com.encounter.DTO.Pictrue;
 import encounter.wilson.com.encounter.R;
+import encounter.wilson.com.encounter.listener.RecyclerViewOnItemClickListener;
 
 /**
  * Created by xiaoqiang on 16/7/31.
@@ -20,7 +21,7 @@ import encounter.wilson.com.encounter.R;
 public class PicWallAdapter extends RecyclerView.Adapter<PicWallAdapter.ViewHolder> {
     private Context context;
     private ArrayList<Pictrue> dataList;
-
+    private static RecyclerViewOnItemClickListener itemClickListener;
     public PicWallAdapter(Context context, ArrayList<Pictrue> dataLsit) {
         this.context = context;
         this.dataList = dataLsit;
@@ -29,6 +30,15 @@ public class PicWallAdapter extends RecyclerView.Adapter<PicWallAdapter.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.main_content_item, parent, false);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (itemClickListener != null) {
+                    itemClickListener.OnItemClick((Integer) view.getTag());
+                }
+            }
+        });
+
         return new ViewHolder(view);
     }
 
@@ -36,6 +46,7 @@ public class PicWallAdapter extends RecyclerView.Adapter<PicWallAdapter.ViewHold
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.imageView.setImageResource(dataList.get(position).getTestpic());
 
+        holder.itemView.setTag(position);
     }
 
     @Override
@@ -43,6 +54,9 @@ public class PicWallAdapter extends RecyclerView.Adapter<PicWallAdapter.ViewHold
         return dataList == null ? 0 : dataList.size();
     }
 
+    public void setOnItemClick(RecyclerViewOnItemClickListener clickListener) {
+        itemClickListener = clickListener;
+    }
     class ViewHolder extends RecyclerView.ViewHolder {
         private SelectableRoundedImageView imageView;
 

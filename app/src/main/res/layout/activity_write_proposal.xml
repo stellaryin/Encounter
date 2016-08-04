@@ -98,7 +98,7 @@
                 android:orientation="vertical"
                 android:padding="10dp">
 
-                <encounter.wilson.com.encounter.UI.FlowRadioGroup
+                <encounter.wilson.com.encounter.ui.FlowRadioGroup
                     android:id="@+id/write_proposa_radiogroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -172,7 +172,7 @@
                         android:layout_height="wrap_content"
                         android:paddingRight="20dp"
                         android:text="手感好"/>
-                </encounter.wilson.com.encounter.UI.FlowRadioGroup>
+                </encounter.wilson.com.encounter.ui.FlowRadioGroup>
 
             </LinearLayout>
 

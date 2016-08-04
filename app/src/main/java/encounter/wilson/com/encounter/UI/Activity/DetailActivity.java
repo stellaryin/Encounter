@@ -1,9 +1,6 @@
-package encounter.wilson.com.encounter.UI.Activity;
+package encounter.wilson.com.encounter.ui.Activity;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -13,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import encounter.wilson.com.encounter.R;
-import encounter.wilson.com.encounter.UI.ImageCycleView;
+import encounter.wilson.com.encounter.ui.ImageCycleView;
 import encounter.wilson.com.encounter.util.Constants;
 
 /**

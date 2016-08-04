@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 import encounter.wilson.com.encounter.DTO.Proposal;
 import encounter.wilson.com.encounter.R;
-import encounter.wilson.com.encounter.UI.NoScrollGridView;
+import encounter.wilson.com.encounter.ui.NoScrollGridView;
 
 /**
  * Created by Administrator on 2016/8/3.
@@ -41,7 +41,7 @@ public class ProposalAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-       Proposal p= plist.get(i);
+        Proposal p = plist.get(i);
         viewHolder vh;
         if (view == null) {
             vh = new viewHolder();
@@ -54,7 +54,7 @@ public class ProposalAdapter extends BaseAdapter {
             vh = (viewHolder) view.getTag();
         }
         String[] tags = p.getTags().split("&");
-        vh.gridView.setAdapter(new ProposalTagsAdapter(context,tags));
+        vh.gridView.setAdapter(new ProposalTagsAdapter(context, tags));
         vh.tv_time.setText(p.getTime());
         return view;
     }

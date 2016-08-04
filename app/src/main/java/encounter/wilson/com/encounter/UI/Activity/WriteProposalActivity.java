@@ -1,4 +1,4 @@
-package encounter.wilson.com.encounter.UI.Activity;
+package encounter.wilson.com.encounter.ui.Activity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,7 +6,7 @@ import android.widget.CheckBox;
 import android.widget.RadioGroup;
 
 import encounter.wilson.com.encounter.R;
-import encounter.wilson.com.encounter.UI.FlowRadioGroup;
+import encounter.wilson.com.encounter.ui.FlowRadioGroup;
 
 public class WriteProposalActivity extends BaseActivity implements View.OnClickListener {
     FlowRadioGroup rg;
