@@ -1,4 +1,4 @@
-package encounter.wilson.com.encounter;
+package encounter.wilson.com.encounter.UI.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import encounter.wilson.com.encounter.R;
 
 public class SettingActivity extends BaseActivity implements View.OnClickListener {
     private SeekBar seekBar;

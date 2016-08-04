@@ -1,7 +1,13 @@
 package encounter.wilson.com.encounter.UI.Activity;
 
 import android.os.Bundle;
+import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import com.wuxiaolong.pullloadmorerecyclerview.PullLoadMoreRecyclerView;
 
@@ -10,19 +16,29 @@ import java.util.List;
 
 import encounter.wilson.com.encounter.DTO.Pictrue;
 import encounter.wilson.com.encounter.R;
+import encounter.wilson.com.encounter.UI.fragment.LeftFragment;
 import encounter.wilson.com.encounter.adapter.PicWallAdapter;
-import encounter.wilson.com.encounter.util.SpacesItemDecoration;
 
 /**
  * Created by xiaoqiang on 16/7/31.
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     //瀑布流
     private PullLoadMoreRecyclerView pullLoadMoreRecyclerView;
     private PicWallAdapter adapter;
 
+    //侧滑
+    private DrawerLayout mdrawerLayout;
+    private ActionBarDrawerToggle drawerbar;
+
+    //侧滑界面
+    private LeftFragment menu;
+    private LinearLayout leftView;
+
+
     //测试数据
     ArrayList<Pictrue> datas;
+    private View showView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init() {
-
+        leftView = (LinearLayout) findViewById(R.id.main_left_view);
 
         pullLoadMoreRecyclerView = (PullLoadMoreRecyclerView) findViewById(R.id.main_content_list);
         pullLoadMoreRecyclerView.setRefreshing(false);
@@ -46,8 +62,37 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new PicWallAdapter(this, datas);
         pullLoadMoreRecyclerView.setAdapter(adapter);
-        SpacesItemDecoration decoration = new SpacesItemDecoration(16);
 
+        mdrawerLayout = (DrawerLayout) findViewById(R.id.main_DrawerLayout);
+
+
+        mdrawerLayout.setDrawerListener(new DrawerLayout.DrawerListener() {
+            @Override
+            public void onDrawerSlide(View drawerView, float slideOffset) {
+
+            }
+
+            @Override
+            public void onDrawerOpened(View drawerView) {
+
+            }
+
+            @Override
+            public void onDrawerClosed(View drawerView) {
+
+            }
+
+            @Override
+            public void onDrawerStateChanged(int newState) {
+
+            }
+        });
+    }
+
+    private void loadFragment() {
+//        getSupportFragmentManager().beginTransaction()
+//                .replace(R.id.main_menu_left, menu)
+//                .commit();
     }
 
 

@@ -1,4 +1,4 @@
-package encounter.wilson.com.encounter;
+package encounter.wilson.com.encounter.UI.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 import encounter.wilson.com.encounter.DTO.Proposal;
+import encounter.wilson.com.encounter.R;
 import encounter.wilson.com.encounter.adapter.ProposalAdapter;
 
 public class MyProposalActivity extends BaseActivity implements View.OnClickListener {

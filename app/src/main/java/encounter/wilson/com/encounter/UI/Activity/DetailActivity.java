@@ -19,7 +19,7 @@ import encounter.wilson.com.encounter.util.Constants;
 /**
  * Created by xiaoqiang on 16/7/12.
  */
-public class DetailActivity extends Activity {
+public class DetailActivity extends BaseActivity {
 
     private ImageCycleView imageCycleView;
     List<String> ImgUrls = new ArrayList<String>();

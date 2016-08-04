@@ -1,14 +1,14 @@
-package encounter.wilson.com.encounter;
+package encounter.wilson.com.encounter.UI.Activity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.widget.Toast;
 
 /**
  * Created by Administrator on 2016/8/2.
  */
-public class BaseActivity extends Activity {
+public class BaseActivity extends FragmentActivity {
     Context context;
 
     @Override
