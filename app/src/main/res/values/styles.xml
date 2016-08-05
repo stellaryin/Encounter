@@ -18,21 +18,12 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
-
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
     <style name="roomRatingBar" parent="@android:style/Widget.RatingBar">
         <item name="android:progressDrawable">@drawable/ratingbar_layer</item>
         <item name="android:minHeight">40dp</item>
         <item name="android:maxHeight">40dp</item>
-    </style>
-
-    <!--dialog 无背景无边框样式-->
-    <style name="Translucent_NoTitle" parent="android:style/Theme.Dialog">
-
-        <item name="android:background">#00000000</item> <!-- 设置自定义布局的背景透明 -->
-        <item name="android:windowBackground">@android:color/transparent
-        </item>  <!-- 设置window背景透明，也就是去边框 -->
     </style>
 </resources>

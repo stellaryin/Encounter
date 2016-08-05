@@ -1,16 +1,12 @@
 package encounter.wilson.com.encounter.EUI.Activity;
 
-import android.app.Dialog;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.RadioGroup;
 
-import encounter.wilson.com.encounter.EUI.FlowRadioGroup;
 import encounter.wilson.com.encounter.R;
+import encounter.wilson.com.encounter.EUI.FlowRadioGroup;
 
 public class WriteProposalActivity extends BaseActivity implements View.OnClickListener {
     FlowRadioGroup rg;
@@ -42,42 +38,15 @@ public class WriteProposalActivity extends BaseActivity implements View.OnClickL
             case R.id.write_proposal_cancel:
                 finish();
                 break;
-            //弹出发表建议dialog
+            //发表建议
             case R.id.write_proposal_finish:
-                showDialog();
+
                 break;
             //添加标签
             case R.id.write_proposal_add:
                 addTags("new tags");
                 break;
-            //发表
-            case R.id.write_dialog_finish:
-                dialog.dismiss();
-                break;
-            case R.id.write_dialog_cancel:
-                dialog.dismiss();
-                break;
         }
-    }
-
-    Dialog dialog = null;
-
-    private void showDialog() {
-        if (dialog == null) {
-            dialog = new Dialog(this, R.style.Translucent_NoTitle);
-            View v = View.inflate(this, R.layout.write_dialog, null);
-            v.findViewById(R.id.write_dialog_finish).setOnClickListener(this);
-            v.findViewById(R.id.write_dialog_cancel).setOnClickListener(this);
-            dialog.setContentView(v);
-            dialog.setCanceledOnTouchOutside(true);
-            // 设置宽度为屏宽、靠近屏幕底部。
-            Window window = dialog.getWindow();
-            WindowManager.LayoutParams wlp = window.getAttributes();
-            wlp.width = WindowManager.LayoutParams.MATCH_PARENT;
-            wlp.gravity = Gravity.BOTTOM;
-            window.setAttributes(wlp);
-        }
-        dialog.show();
     }
 
     //添加新标签
