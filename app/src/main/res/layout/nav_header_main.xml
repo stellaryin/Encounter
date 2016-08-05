@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="200dp">
 
-    <encounter.wilson.com.encounter.ui.CircleImageView
+    <encounter.wilson.com.encounter.EUI.CircleImageView
         android:id="@+id/user_headr_img"
         android:layout_width="100dp"
         android:layout_height="100dp"

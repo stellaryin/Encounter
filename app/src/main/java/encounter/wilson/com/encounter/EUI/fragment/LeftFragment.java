@@ -1,4 +1,4 @@
-package encounter.wilson.com.encounter.ui.fragment;
+package encounter.wilson.com.encounter.EUI.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

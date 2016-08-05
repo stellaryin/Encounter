@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 import encounter.wilson.com.encounter.DTO.Proposal;
 import encounter.wilson.com.encounter.R;
-import encounter.wilson.com.encounter.ui.NoScrollGridView;
+import encounter.wilson.com.encounter.EUI.NoScrollGridView;
 
 /**
  * Created by Administrator on 2016/8/3.

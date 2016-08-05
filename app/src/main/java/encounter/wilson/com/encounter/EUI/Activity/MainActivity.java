@@ -1,4 +1,4 @@
-package encounter.wilson.com.encounter.ui.Activity;
+package encounter.wilson.com.encounter.EUI.Activity;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -16,7 +16,6 @@ import java.util.List;
 import encounter.wilson.com.encounter.DTO.Pictrue;
 import encounter.wilson.com.encounter.R;
 import encounter.wilson.com.encounter.listener.RecyclerViewOnItemClickListener;
-import encounter.wilson.com.encounter.ui.fragment.LeftFragment;
 import encounter.wilson.com.encounter.adapter.PicWallAdapter;
 
 /**

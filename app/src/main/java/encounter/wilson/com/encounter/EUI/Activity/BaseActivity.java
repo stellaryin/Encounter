@@ -1,4 +1,4 @@
-package encounter.wilson.com.encounter.ui.Activity;
+package encounter.wilson.com.encounter.EUI.Activity;
 
 import android.content.Context;
 import android.os.Bundle;
