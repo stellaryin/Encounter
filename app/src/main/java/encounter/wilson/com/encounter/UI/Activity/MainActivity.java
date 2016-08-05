@@ -32,7 +32,6 @@ public class MainActivity extends BaseActivity {
     private ActionBarDrawerToggle drawerbar;
 
     //侧滑界面
-    private LeftFragment menu;
     private LinearLayout leftView;
 
 
